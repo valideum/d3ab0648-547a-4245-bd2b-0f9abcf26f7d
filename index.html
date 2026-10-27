@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor X-Ray - Forensic Contractor Background Checks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #F8F6F2;
+      color: #1A2B47;
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Arvo', serif;
+    }
+    /* Blueprint subtle grid overlay pattern */
+    .blueprint-grid-subtle {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(26, 43, 71, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(26, 43, 71, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-alabaster text-blueprint-ink antialiased selection:bg-safety-amber selection:text-white">
+
+  <!-- ================= SECTION 1: STICKY HIGH-TRUST HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-alabaster/95 backdrop-blur-md border-b border-blueprint-slate py-3 px-4 md:px-8 transition-shadow duration-200 shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Left Side (Logo) -->
+      <a href="/" class="flex items-center space-x-2.5 group">
+        <!-- Custom SVG Logo: Magnifying glass with blueprint document grid/lines -->
+        <svg class="w-8 h-8 text-blueprint-ink transform group-hover:scale-105 transition-transform" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="11" stroke="#1A2B47" stroke-width="2.5" fill="#EAEFF5" fill-opacity="0.5"/>
+          <!-- Inner document lines/grid -->
+          <line x1="11" y1="12" x2="21" y2="12" stroke="#1A2B47" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="16" x2="21" y2="16" stroke="#1A2B47" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="20" x2="18" y2="20" stroke="#E78B38" stroke-width="2" stroke-linecap="round"/>
+          <!-- Glass Handle -->
+          <line x1="24.5" y1="24.5" x2="32" y2="32" stroke="#1A2B47" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="font-display font-bold text-xl text-blueprint-ink tracking-tight">Contractor X-Ray</span>
+      </a>
+
+      <!-- Right Side (Navigation & CTA) -->
+      <div class="flex items-center space-x-6 md:space-x-8">
+        <nav class="hidden sm:flex space-x-6 text-sm font-medium text-blueprint-ink/80">
+          <a href="#how-it-works" class="hover:text-safety-amber transition-colors">How It Works</a>
+          <a href="#pricing" class="hover:text-safety-amber transition-colors">Pricing</a>
+        </nav>
+        <button data-track="click" data-cta-name="nav_primary_cta" data-scroll-to="pricing" class="bg-safety-amber text-white font-bold py-2.5 px-5 rounded-md text-sm hover:opacity-90 active:scale-95 transition-all shadow-sm flex items-center gap-1.5">
+          <span>Run Contractor Check</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= SECTION 2: SPLIT HERO ================= -->
+    <section class="blueprint-grid-subtle relative border-b border-blueprint-slate/60">
+      <div class="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Headline & Interactive Form -->
+        <div class="flex flex-col justify-center">
+          <p class="font-bold text-sm text-safety-amber tracking-wider uppercase inline-flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-safety-amber animate-pulse"></span>
+            FOR $50K+ RESIDENTIAL PROJECTS
+          </p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold text-blueprint-ink mt-3 leading-[1.15] tracking-tight">
+            Don't Sign That $50k Remodel Contract Blind
+          </h1>
+          <p class="text-lg text-blueprint-ink/80 mt-4 max-w-xl leading-relaxed">
+            Instant forensic background checks revealing hidden liens, lawsuits, and license violations generic 5-star reviews miss.
+          </p>
+
+          <!-- Interactive Input CTA Form (Hero) -->
+          <form id="hero-interactive-form" data-form-name="hero_interactive_cta" data-action="scroll-to-pricing" class="mt-8 space-y-3.5 max-w-lg bg-white/70 p-2 sm:p-3 rounded-xl border border-blueprint-slate shadow-sm backdrop-blur-sm">
+            <div class="relative">
+              <input type="text" id="hero-company-name" name="company_name" required placeholder="Enter Contractor or Company Name..." class="w-full p-4 text-blueprint-ink placeholder-blueprint-ink/50 bg-white border border-blueprint-slate rounded-md focus:outline-none focus:ring-2 focus:ring-safety-amber focus:border-safety-amber transition-all text-base shadow-inner">
+            </div>
+            <div class="relative">
+              <input type="text" id="hero-company-id" name="company_id" placeholder="License # or State (Optional)" class="w-full p-4 text-blueprint-ink placeholder-blueprint-ink/50 bg-white border border-blueprint-slate rounded-md focus:outline-none focus:ring-2 focus:ring-safety-amber focus:border-safety-amber transition-all text-base shadow-inner">
+            </div>
+            <button type="submit" data-track="click" data-cta-name="hero_interactive_submit" data-scroll-to="pricing" class="w-full bg-safety-amber text-white font-bold py-4 px-6 text-lg rounded-md hover:opacity-90 active:scale-[0.99] transition-all shadow-md flex items-center justify-center gap-2">
+              <span>Scan Public Records</span>
+              <span class="text-xl">&rarr;</span>
+            </button>
+            <p class="text-xs text-center text-blueprint-ink/60 pt-1">
+              🔒 Scans 50+ official state registries, county civil dockets & corporate databases.
+            </p>
+          </form>
+        </div>
+
+        <!-- Right Column: Interactive Domain Proof Artifact (Summary Dossier) -->
+        <div class="relative">
+          <!-- Subtle decorative angle folder edge -->
+          <div class="absolute -top-3 -right-3 w-full h-full bg-blueprint-slate rounded-xl -rotate-1 border border-blueprint-slate/80 -z-10"></div>
+          
+          <div class="bg-white rounded-lg shadow-xl border border-blueprint-slate p-6 sm:p-8 relative">
+            <!-- Dossier Header & Badge -->
+            <div class="flex items-center justify-between border-b border-blueprint-slate pb-4 mb-4">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-blueprint-ink/50">Illustrative Forensic Dossier</p>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <h3 class="text-2xl font-bold font-display text-blueprint-ink">Apex Builders LLC</h3>
+                </div>
+                <p class="text-xs text-blueprint-ink/60">Entity ID: #FL-2018-098231 • Travis R. Sterling (Principal)</p>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1.5 shadow-sm">
+                <svg class="w-3.5 h-3.5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                License Verified
+              </span>
+            </div>
+
+            <!-- Risk Flags Section -->
+            <div class="mt-4 space-y-3.5">
+              <!-- Flag 1: Lawsuits -->
+              <div class="flex items-start space-x-3.5 bg-red-50 border border-red-200 p-3.5 rounded-md hover:bg-red-50/80 transition-colors">
+                <div class="flex-shrink-0 mt-0.5">
+                  <!-- Warning Triangle Icon -->
+                  <svg class="w-5 h-5 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-bold text-blueprint-ink text-sm sm:text-base">2 Active Lawsuits</p>
+                    <span class="text-[11px] font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded">High Severity</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-blueprint-ink/75 mt-0.5">Docket #CV-2024-9876, #CV-2023-1234 (Residential Non-Completion)</p>
+                </div>
+              </div>
+
+              <!-- Flag 2: Mechanic's Lien -->
+              <div class="flex items-start space-x-3.5 bg-amber-50 border border-amber-200 p-3.5 rounded-md hover:bg-amber-50/80 transition-colors">
+                <div class="flex-shrink-0 mt-0.5">
+                  <!-- Flag Icon -->
+                  <svg class="w-5 h-5 text-safety-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                    <line x1="4" y1="22" x2="4" y2="15"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <p class="font-bold text-blueprint-ink text-sm sm:text-base">1 Mechanic's Lien Filed</p>
+                    <span class="text-[11px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Financial Alert</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-blueprint-ink/75 mt-0.5">Filed by subcontractor on 08/15/2023. Unpaid timber supplier.</p>
+                </div>
+              </div>
+
+              <!-- Flag 3: Cross Entity Note -->
+              <div class="flex items-start space-x-3.5 bg-blueprint-slate/60 border border-blueprint-slate p-3.5 rounded-md">
+                <div class="flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5 text-blueprint-ink/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="font-bold text-blueprint-ink text-sm">Entity Link Discovered</p>
+                  <p class="text-xs sm:text-sm text-blueprint-ink/75 mt-0.5">Principal also owned revoked entity "Sterling Custom Works".</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inspect CTA -->
+            <button data-track="click" data-cta-name="hero_proof_inspect" data-scroll-to="pricing" class="mt-6 w-full text-center text-safety-amber font-bold py-2.5 rounded-md hover:bg-amber-50/50 hover:underline transition-all flex items-center justify-center gap-1.5 border border-dashed border-safety-amber/40">
+              <span>View Full Sample Report</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: VERBATIM VOICE-OF-CUSTOMER PAIN GRID ================= -->
+    <section class="bg-blueprint-slate py-16 md:py-24 border-b border-blueprint-slate">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="text-xs font-bold uppercase tracking-wider text-safety-amber">Why Public Reviews Fail Homeowners</p>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-blueprint-ink mt-2 mb-4">
+            Stop Gambling Your Deposit on 5-Star Reviews
+          </h2>
+          <p class="text-blueprint-ink/70 max-w-2xl mx-auto">
+            Review widgets filter out legal reality. While family and friends leave 5-star ratings, courthouse records paint the real financial and legal picture.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+          <!-- Column 1 -->
+          <div class="bg-white rounded-xl p-8 border border-blueprint-slate/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-lg mb-5">
+                $
+              </div>
+              <h3 class="font-bold text-xl text-blueprint-ink font-display">The Old Way: Financial Black Holes</h3>
+              <div class="relative pl-4 mt-3 border-l-2 border-red-300">
+                <p class="text-blueprint-ink/80 italic text-sm leading-relaxed">
+                  "My upfront deposit vanished... the contractor just ghosted me mid-project."
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blueprint-slate">
+              <p class="font-bold text-xs uppercase tracking-wider text-safety-amber">The Contractor X-Ray Approach</p>
+              <p class="text-sm text-blueprint-ink/90 mt-2 font-medium leading-relaxed">
+                Automated Lien & Judgment Search flags contractors with a history of financial distress or unpaid debts before you pay.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="bg-white rounded-xl p-8 border border-blueprint-slate/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-blueprint-ink text-white flex items-center justify-center font-bold text-lg mb-5">
+                ⚖️
+              </div>
+              <h3 class="font-bold text-xl text-blueprint-ink font-display">The Old Way: Legal Shell Games</h3>
+              <div class="relative pl-4 mt-3 border-l-2 border-blueprint-ink/30">
+                <p class="text-blueprint-ink/80 italic text-sm leading-relaxed">
+                  "This 'fly-by-night' operator was just a shell LLC for a guy with a revoked license."
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blueprint-slate">
+              <p class="font-bold text-xs uppercase tracking-wider text-safety-amber">The Contractor X-Ray Approach</p>
+              <p class="text-sm text-blueprint-ink/90 mt-2 font-medium leading-relaxed">
+                Entity Resolution Tracking connects the dots between serial LLCs to expose operators hiding past violations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="bg-white rounded-xl p-8 border border-blueprint-slate/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-amber-100 text-safety-amber flex items-center justify-center font-bold text-lg mb-5">
+                ★
+              </div>
+              <h3 class="font-bold text-xl text-blueprint-ink font-display">The Old Way: Hollow Reviews</h3>
+              <div class="relative pl-4 mt-3 border-l-2 border-amber-300">
+                <p class="text-blueprint-ink/80 italic text-sm leading-relaxed">
+                  "He had great reviews online, but we later found out he was being sued by three other families."
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blueprint-slate">
+              <p class="font-bold text-xs uppercase tracking-wider text-safety-amber">The Contractor X-Ray Approach</p>
+              <p class="text-sm text-blueprint-ink/90 mt-2 font-medium leading-relaxed">
+                We go beyond reviews, aggregating court dockets and disciplinary action databases that review sites don't touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: CONCRETE PRODUCT PROOF & HOW IT WORKS ================= -->
+    <section class="py-16 md:py-24 bg-alabaster border-b border-blueprint-slate" id="how-it-works">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        
+        <!-- Part 1: How It Works -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold uppercase tracking-wider text-safety-amber">Simple & Fast Due Diligence</span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-display text-blueprint-ink mt-2">
+              Your Forensic Report in 3 Simple Steps
+            </h2>
+            <p class="text-blueprint-ink/75 mt-3">No complicated setup or waiting days for a private investigator.</p>
+          </div>
+
+          <!-- Numbered Steps Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14 text-center">
+            <!-- Step 1 -->
+            <div class="bg-white p-8 rounded-xl border border-blueprint-slate shadow-sm relative group hover:border-safety-amber transition-colors">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-alabaster text-safety-amber font-display text-2xl font-bold border border-blueprint-slate group-hover:scale-110 transition-transform">
+                01
+              </div>
+              <h3 class="mt-4 font-bold text-lg text-blueprint-ink font-display">Enter Contractor Name</h3>
+              <p class="mt-2 text-sm text-blueprint-ink/80 leading-relaxed">Provide the business name and optionally a license number or state.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-white p-8 rounded-xl border border-blueprint-slate shadow-sm relative group hover:border-safety-amber transition-colors">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-alabaster text-safety-amber font-display text-2xl font-bold border border-blueprint-slate group-hover:scale-110 transition-transform">
+                02
+              </div>
+              <h3 class="mt-4 font-bold text-lg text-blueprint-ink font-display">We Scan Public Records</h3>
+              <p class="mt-2 text-sm text-blueprint-ink/80 leading-relaxed">Our system scans state licensing boards, county court dockets, and corporate filings in seconds.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-white p-8 rounded-xl border border-blueprint-slate shadow-sm relative group hover:border-safety-amber transition-colors">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-alabaster text-safety-amber font-display text-2xl font-bold border border-blueprint-slate group-hover:scale-110 transition-transform">
+                03
+              </div>
+              <h3 class="mt-4 font-bold text-lg text-blueprint-ink font-display">Get Instant Risk Report</h3>
+              <p class="mt-2 text-sm text-blueprint-ink/80 leading-relaxed">Receive a downloadable PDF detailing any red flags, from liens to lawsuits.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 2: Concrete Proof (Sample Records) -->
+        <div class="mt-20 sm:mt-24 pt-12 border-t border-blueprint-slate">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold uppercase tracking-wider text-safety-amber">Live Public Record Feed</span>
+            <h2 class="text-3xl font-bold font-display text-blueprint-ink mt-2">
+              Uncover What Generic Checks Miss
+            </h2>
+            <p class="text-blueprint-ink/75 mt-2">Actual anonymized records surfaced across recent home remodeling audits.</p>
+          </div>
+
+          <!-- Proof Cards -->
+          <div class="space-y-4 mt-10">
+            <!-- Card 1: Lien Alert -->
+            <div class="bg-white border border-blueprint-slate rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm hover:shadow transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-2.5 rounded-md bg-amber-50 text-safety-amber border border-amber-200 flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-safety-amber font-bold text-xs uppercase tracking-wider px-2 py-0.5 bg-amber-50 rounded">Lien Alert</span>
+                    <span class="text-xs text-blueprint-ink/50">Recorded 08/2023</span>
+                  </div>
+                  <p class="text-blueprint-ink font-bold text-base mt-1">J&J Drywall vs. Apex Builders LLC</p>
+                  <p class="text-sm text-blueprint-ink/70">Cause: Unpaid Subcontractor | Amount: <span class="font-semibold text-blueprint-ink">$14,500</span></p>
+                </div>
+              </div>
+              <button data-track="click" data-cta-name="sample_row_action_lien" data-scroll-to="pricing" class="text-sm font-bold text-safety-amber hover:underline whitespace-nowrap self-end sm:self-center">
+                View Details &rarr;
+              </button>
+            </div>
+
+            <!-- Card 2: Litigation Check -->
+            <div class="bg-white border border-blueprint-slate rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm hover:shadow transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-2.5 rounded-md bg-red-50 text-red-600 border border-red-200 flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-red-600 font-bold text-xs uppercase tracking-wider px-2 py-0.5 bg-red-50 rounded">Litigation Found</span>
+                    <span class="text-xs text-red-700 bg-red-100 px-2 py-0.5 rounded font-medium">Pending Trial</span>
+                  </div>
+                  <p class="text-blueprint-ink font-bold text-base mt-1">Smith vs. Apex Builders LLC (Active)</p>
+                  <p class="text-sm text-blueprint-ink/70">Case Type: Breach of Contract | Filed: <span class="font-semibold text-blueprint-ink">01/20/2024</span> (County Superior Court)</p>
+                </div>
+              </div>
+              <button data-track="click" data-cta-name="sample_row_action_litigation" data-scroll-to="pricing" class="text-sm font-bold text-safety-amber hover:underline whitespace-nowrap self-end sm:self-center">
+                View Details &rarr;
+              </button>
+            </div>
+
+            <!-- Card 3: Corporate Structure -->
+            <div class="bg-white border border-blueprint-slate rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm hover:shadow transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-2.5 rounded-md bg-blue-50 text-blue-600 border border-blue-200 flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-blue-600 font-bold text-xs uppercase tracking-wider px-2 py-0.5 bg-blue-50 rounded">Entity History</span>
+                    <span class="text-xs text-blueprint-ink/50">Cross-Entity Match</span>
+                  </div>
+                  <p class="text-blueprint-ink font-bold text-base mt-1">Principal linked to 2 prior dissolved LLCs</p>
+                  <p class="text-sm text-blueprint-ink/70">"Summit Contracting" (2019-2021), "Pinnacle Renovations" (2021-2023)</p>
+                </div>
+              </div>
+              <button data-track="click" data-cta-name="sample_row_action_corp" data-scroll-to="pricing" class="text-sm font-bold text-safety-amber hover:underline whitespace-nowrap self-end sm:self-center">
+                View Details &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: TWO-TIER PRICING & LEAD CAPTURE TRIGGER ================= -->
+    <section class="bg-blueprint-slate py-16 md:py-24" id="pricing">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-safety-amber">Transparent Protection</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-blueprint-ink mt-2">
+            Get Your Forensic Report in Minutes
+          </h2>
+          <p class="mt-3 text-lg text-blueprint-ink/80">
+            One-time payments. No subscriptions. Instant PDF delivery.
+          </p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
+          
+          <!-- Tier 1 Card: Single Report -->
+          <div class="bg-white border-2 border-safety-amber rounded-xl p-8 shadow-xl flex flex-col justify-between relative transform hover:-translate-y-1 transition-transform">
+            <div class="absolute -top-3.5 right-6 bg-safety-amber text-white text-xs font-bold uppercase py-1 px-3 rounded-full shadow-sm tracking-wide">
+              Most Popular
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-safety-amber font-display">Single Report</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-5xl font-bold font-display text-blueprint-ink">$29</span>
+                <span class="ml-2 text-sm text-blueprint-ink/70">One-time payment</span>
+              </div>
+              <p class="mt-5 text-sm text-blueprint-ink/90 leading-relaxed font-medium">
+                Perfect for vetting one primary contractor before signing your contract or wiring a deposit.
+              </p>
+              
+              <ul class="mt-6 space-y-3 text-sm text-blueprint-ink/90 border-t border-blueprint-slate pt-6">
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>Comprehensive Litigation Check</strong> (Civil/County Dockets)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>Mechanic's Lien & Tax Judgment Search</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>State Contractor License Verification</strong> & Board Actions</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Instant Downloadable PDF Forensic Dossier</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-track="click" data-cta-name="pricing_starter_select" data-tier="Single Report ($29)" data-open-modal="true" class="mt-8 w-full bg-safety-amber text-white font-bold py-3.5 px-4 text-lg rounded-md hover:opacity-90 active:scale-95 transition-all shadow-md text-center">
+              Get Single Report
+            </button>
+          </div>
+
+          <!-- Tier 2 Card: Contractor Pack -->
+          <div class="bg-white border border-blueprint-slate rounded-xl p-8 shadow-sm flex flex-col justify-between hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-blueprint-ink font-display">Contractor Pack</h3>
+                <span class="text-xs bg-blueprint-slate text-blueprint-ink font-bold py-0.5 px-2.5 rounded-full">Save 30%</span>
+              </div>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-5xl font-bold font-display text-blueprint-ink">$99</span>
+                <span class="ml-2 text-sm text-blueprint-ink/70">Includes 5 reports</span>
+              </div>
+              <p class="mt-5 text-sm text-blueprint-ink/90 leading-relaxed font-medium">
+                Best value for comparing multiple bids or vetting a General Contractor along with their key subcontractors.
+              </p>
+
+              <ul class="mt-6 space-y-3 text-sm text-blueprint-ink/90 border-t border-blueprint-slate pt-6">
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>5 Forensic Background Reports</strong> (Never Expire)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>All Litigation, Lien & License checks</strong> included</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span><strong>Entity Resolution Tracking</strong> (Serial LLC detection)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Priority Processing & Subcontractor Batching</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-track="click" data-cta-name="pricing_pro_select" data-tier="Contractor Pack ($99)" data-open-modal="true" class="mt-8 w-full bg-blueprint-ink text-white font-bold py-3.5 px-4 text-lg rounded-md hover:opacity-90 active:scale-95 transition-all shadow-md text-center">
+              Get Contractor Pack
+            </button>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-xs text-blueprint-ink/60">
+            Backed by our 100% Data Guarantee • Instant Access Delivered via Email & Dashboard
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-12 bg-alabaster border-t border-blueprint-slate text-center">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col items-center justify-center">
+      <!-- Monochrome SVG Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <svg class="w-7 h-7 text-blueprint-ink" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="11" stroke="#1A2B47" stroke-width="2.5" fill="none"/>
+          <line x1="11" y1="12" x2="21" y2="12" stroke="#1A2B47" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="16" x2="21" y2="16" stroke="#1A2B47" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="20" x2="18" y2="20" stroke="#1A2B47" stroke-width="2" stroke-linecap="round"/>
+          <line x1="24.5" y1="24.5" x2="32" y2="32" stroke="#1A2B47" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="font-display font-bold text-lg text-blueprint-ink">Contractor X-Ray</span>
+      </a>
+
+      <p class="text-sm text-blueprint-ink/60 mt-4">
+        &copy; <span id="copyright-year">2025</span> Contractor X-Ray. All Rights Reserved. Forensic background reporting for residential construction.
+      </p>
+      
+      <div class="mt-3 flex items-center space-x-4">
+        <a href="/campaign-privacy.html?brand=Contractor%20X-Ray" target="_blank" rel="noopener" class="text-sm text-blueprint-ink/60 hover:text-safety-amber underline transition-colors">Privacy Notice</a>
+        <span class="text-blueprint-ink/30">•</span>
+        <a href="#how-it-works" class="text-sm text-blueprint-ink/60 hover:text-safety-amber transition-colors">Public Records Disclosure</a>
+        <span class="text-blueprint-ink/30">•</span>
+        <a href="#pricing" class="text-sm text-blueprint-ink/60 hover:text-safety-amber transition-colors">Pricing & Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= LEAD CAPTURE MODAL ================= -->
+  <div id="lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-blueprint-ink/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200">
+    <div class="max-w-md w-full bg-white p-8 rounded-xl shadow-2xl border border-blueprint-slate relative transform scale-95 transition-transform duration-200" id="lead-modal-container">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" class="absolute top-4 right-4 text-blueprint-ink/50 hover:text-blueprint-ink p-1 rounded-md transition-colors" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Modal Content -->
+      <div class="text-left">
+        <div class="inline-block p-2 rounded-lg bg-amber-50 text-safety-amber mb-3 border border-amber-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold font-display text-blueprint-ink">Secure Your Report Access</h2>
+        <p class="mt-2 text-sm text-blueprint-ink/80 leading-relaxed">
+          Enter your email to receive your secure payment link and instant report access.
+        </p>
+
+        <!-- Selected Tier Display -->
+        <div class="mt-4 p-3 bg-blueprint-slate/80 rounded-md border border-blueprint-slate flex items-center justify-between">
+          <span class="text-xs font-semibold text-blueprint-ink/70">Selected Option:</span>
+          <span id="modal-selected-tier-badge" class="text-xs font-bold text-blueprint-ink bg-white px-2.5 py-1 rounded shadow-sm border border-blueprint-slate">Single Report: $29</span>
+        </div>
+
+        <!-- Form -->
+        <form id="modal-lead-form" data-form-name="email_lead_capture" class="mt-6 space-y-4">
+          <div>
+            <label for="lead-email" class="block text-xs font-bold uppercase tracking-wider text-blueprint-ink/70 mb-1">Your Email Address</label>
+            <input type="email" id="lead-email" name="email" required placeholder="Enter your email address..." class="w-full p-3.5 text-blueprint-ink border border-blueprint-slate rounded-md focus:ring-2 focus:ring-safety-amber focus:border-safety-amber outline-none transition-all shadow-inner">
+          </div>
+          
+          <!-- Hidden inputs populated by JS -->
+          <input type="hidden" id="modal-selected-tier-input" name="selected_tier" value="Single Report">
+          <input type="hidden" id="modal-contractor-name-input" name="contractor_name" value="">
+          <input type="hidden" id="modal-contractor-id-input" name="contractor_id" value="">
+
+          <button type="submit" data-track="click" data-cta-name="modal_form_submit" class="w-full bg-safety-amber text-white font-bold py-3.5 px-6 text-lg rounded-md hover:opacity-90 active:scale-95 transition-all shadow-md">
+            Continue to Payment &rarr;
+          </button>
+        
+<p class="valideum-privacy-note text-[11px] opacity-75 mt-2 leading-relaxed">🔒 Your email is protected. Read our <a href="/campaign-privacy.html?brand=Contractor%20X-Ray" target="_blank" rel="noopener" data-privacy-link="true" class="underline">Privacy Notice</a>.</p>
+</form>
+
+        <p class="text-xs text-center text-blueprint-ink/50 mt-4">
+          🔒 256-bit Encrypted Checkout. We respect your privacy. No spam.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript logic for modal, smooth scroll, and form handoffs -->
+  
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIVERSAL LEAD & INTENT CAPTURE MODAL -->
+<!-- ========================================== -->
+<div id="valideum-lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 hidden" role="dialog" aria-modal="true" aria-labelledby="valideum-modal-title">
+  <div class="relative w-full max-w-lg bg-[#14171d] text-[#e2e8f0] border border-[#232833] rounded-lg shadow-2xl p-6 md:p-8">
+    <!-- Close button -->
+    <button id="valideum-modal-close" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2 rounded focus:outline-none" aria-label="Close modal">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Modal Content -->
+    <div id="valideum-modal-content">
+      <div class="mb-6">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-7 h-7 rounded bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold text-xs uppercase">CX</div>
+          <span id="valideum-modal-badge" class="text-xs uppercase font-bold tracking-widest text-amber-400">Contractor X-Ray</span>
+        </div>
+        <h3 id="valideum-modal-title" class="text-xl md:text-2xl font-bold text-white leading-snug">Get Started with Contractor X-Ray</h3>
+        <p id="valideum-modal-desc" class="text-sm text-gray-400 mt-1">Enter your email below to continue and receive your tailored Contractor X-Ray access details.</p>
+      </div>
+
+      <form id="valideum-modal-form" class="space-y-4">
+        <input type="hidden" name="selected_tier" id="valideum-modal-tier" value="">
+        <input type="hidden" name="source_cta" id="valideum-modal-source" value="">
+        <div id="valideum-modal-preserved-fields"></div>
+
+        <div>
+          <label for="valideum-modal-email" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Your Email Address</label>
+          <input type="email" id="valideum-modal-email" name="email" required placeholder="name@domain.com" class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label for="valideum-modal-need" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Primary Need / Note (Optional)</label>
+          <input type="text" id="valideum-modal-need" name="primary_need" placeholder="e.g. Specific goal, workflow, or requirement..." class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <button type="submit" id="valideum-modal-submit-btn" class="w-full py-3.5 px-6 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-black font-bold uppercase tracking-wider text-xs rounded transition-all shadow-lg cursor-pointer">
+          Continue
+        </button>
+
+        <p class="text-[11px] text-gray-400 text-center leading-relaxed pt-1">
+          🔒 Your email is protected. Read our <a href="/campaign-privacy.html?brand=Contractor%20X-Ray" target="_blank" rel="noopener" data-privacy-link="true" class="text-amber-400 underline hover:text-amber-300">Privacy Notice</a>.
+        </p>
+      </form>
+    </div>
+
+    <!-- Confirmation state (D1/D2) -->
+    <div id="valideum-modal-confirmation" class="hidden text-center py-6">
+      <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center mx-auto mb-4 text-amber-400 text-xl font-bold">✓</div>
+      <div class="text-[11px] uppercase tracking-widest text-amber-400 font-bold mb-1">Contractor X-Ray</div>
+      <h3 class="text-2xl font-bold text-white mb-2">You're On The List</h3>
+      <p class="text-sm text-gray-300 leading-relaxed max-w-sm mx-auto mb-4">
+        Thank you for your interest in Contractor X-Ray! We've recorded your request and will notify you as soon as your access is ready.
+      </p>
+      <a href="/campaign-privacy.html?brand=Contractor%20X-Ray" target="_blank" rel="noopener" data-privacy-link="true" class="text-xs text-amber-400/80 underline hover:text-amber-300 block mb-5">Privacy &amp; Early Access Notice</a>
+      <button type="button" id="valideum-confirmation-close" class="px-6 py-2.5 bg-[#232833] hover:bg-[#2d3340] text-white text-xs uppercase tracking-wider font-semibold rounded cursor-pointer">
+        Return to Contractor X-Ray
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END VALIDEUM UNIVERSAL MODAL -->
+
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIFIED CONVERSION & TELEMETRY RUNTIME -->
+<!-- ========================================== -->
+<script id="valideum-runtime">
+(function() {
+  if (window.__VALIDEUM_RUNTIME_ACTIVE) return;
+  window.__VALIDEUM_RUNTIME_ACTIVE = true;
+
+  const MODE = "preview"; // "preview" or "live"
+  const CAMPAIGN_ID = "";
+  const APP_URL = "https://valideum.com";
+  const API_ENDPOINT = APP_URL + "/api/track";
+  const KEYWORD_VARIANTS = {"contractor x ray":"Don't Sign That $50k Remodel Contract Blind","homeowners undertaking projects over 50 000":"Don't Sign That $50k Remodel Contract Blind — Built for Homeowners undertaking projects...","homeowners with past negative contractor experiences":"Don't Sign That $50k Remodel Contract Blind — Built for Homeowners with past negative...","homeowners new to an area":"Don't Sign That $50k Remodel Contract Blind — Built for Homeowners new to an area.","uncover hidden mechanic":"Uncover hidden mechanic's liens, active lawsuits, and bond forfeitures","detect fly night":"Detect fly-by-night LLC name hopping and repeat scam patterns","instantly verify state":"Instantly verify state licensing, insurance, and disciplinary records","automated risk scoring":"Automated risk scoring with optional insurance-backed protection guarantee","automated multi jurisdiction":"Automated multi-jurisdiction litigation and court judgment search","mechanic lien financial":"Mechanic's lien and financial distress flag detection","entity resolution tracking":"Entity resolution tracking serial LLC formations and past disciplinary actions","comprehensive risk index":"Comprehensive risk index score with instant downloadable forensic PDF report","contractors absconding upfront":"Don't Sign That $50k Remodel Contract Blind","homeowners mechanic liens":"Don't Sign That $50k Remodel Contract Blind","disreputable contractors closing":"Don't Sign That $50k Remodel Contract Blind","superficial review aggregators":"Don't Sign That $50k Remodel Contract Blind"};
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const effectiveCampaignId = urlParams.get("campaign_id") || CAMPAIGN_ID;
+  let gclid = urlParams.get("gclid");
+  if (gclid) {
+    try { sessionStorage.setItem("valideum_gclid", gclid); } catch(e) {}
+  } else {
+    try { gclid = sessionStorage.getItem("valideum_gclid"); } catch(e) {}
+  }
+
+  // R2.5 Dynamic Keyword Headline Match (?kw={keyword})
+  // Only swaps from pre-approved KEYWORD_VARIANTS; never renders raw query text.
+  let matchedKw = null;
+  let swappedHeadline = null;
+  const rawKw = urlParams.get("kw") || urlParams.get("utm_term");
+  if (rawKw && KEYWORD_VARIANTS && Object.keys(KEYWORD_VARIANTS).length > 0) {
+    const normKw = rawKw.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+    if (normKw.length >= 3) {
+      if (KEYWORD_VARIANTS[normKw]) {
+        matchedKw = normKw;
+        swappedHeadline = KEYWORD_VARIANTS[normKw];
+      } else {
+        const kwTokens = normKw.split(" ").filter(function(w) { return w.length >= 4; });
+        let bestScore = 0;
+        for (const [variantKey, headlineText] of Object.entries(KEYWORD_VARIANTS)) {
+          let score = 0;
+          for (let i = 0; i < kwTokens.length; i++) {
+            if (variantKey.indexOf(kwTokens[i]) !== -1) score++;
+          }
+          if (score > bestScore) {
+            bestScore = score;
+            matchedKw = variantKey;
+            swappedHeadline = headlineText;
+          }
+        }
+      }
+      if (swappedHeadline) {
+        const h1El = document.querySelector("h1");
+        if (h1El && h1El.innerText.trim() !== swappedHeadline.trim()) {
+          h1El.textContent = swappedHeadline;
+          h1El.setAttribute("data-kw-matched", matchedKw);
+        }
+      }
+    }
+  }
+
+  function sendEvent(eventType, metadata, extra) {
+    if (MODE !== "live" || !effectiveCampaignId) return;
+    try {
+      const payload = JSON.stringify(Object.assign({
+        campaign_id: effectiveCampaignId,
+        event_type: eventType,
+        metadata: metadata || {},
+        gclid: gclid
+      }, extra || {}));
+      fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true
+      }).catch(function() {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(API_ENDPOINT, new Blob([payload], { type: "application/json" }));
+        }
+      });
+    } catch(e) {
+      console.warn("Valideum telemetry dispatch error:", e);
+    }
+  }
+
+  // Initial page view (live mode only)
+  sendEvent("page_view", {
+    path: window.location.pathname,
+    referrer: document.referrer || null,
+    kw_matched: matchedKw || null,
+    h1_variant: swappedHeadline || null
+  });
+
+  // Track whether visitor viewed the Privacy Notice BEFORE showing interest vs. showed interest directly
+  const BRAND_NAME = "Contractor X-Ray";
+  let hasSeenPrivacy = false;
+  let privacySeenAt = null;
+  let hasShownInterest = false;
+
+  try {
+    const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+    if (storedPriv) {
+      hasSeenPrivacy = true;
+      privacySeenAt = Number(storedPriv) || Date.now();
+    }
+    if (localStorage.getItem("valideum_shown_interest") || sessionStorage.getItem("valideum_shown_interest")) {
+      hasShownInterest = true;
+    }
+  } catch (e) {}
+
+  function checkSawPrivacy() {
+    if (hasSeenPrivacy) return true;
+    try {
+      const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+      if (storedPriv) {
+        hasSeenPrivacy = true;
+        privacySeenAt = Number(storedPriv) || Date.now();
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function markInterest() {
+    hasShownInterest = true;
+    try {
+      sessionStorage.setItem("valideum_shown_interest", String(Date.now()));
+      localStorage.setItem("valideum_shown_interest", String(Date.now()));
+    } catch (e) {}
+  }
+
+  // SHA-256 helper
+  async function hashEmail(email) {
+    if (!email) return null;
+    try {
+      const normalized = email.toLowerCase().trim();
+      const encoder = new TextEncoder();
+      const data = encoder.encode(normalized);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+      return Array.from(new Uint8Array(hashBuffer)).map(function(b) { return b.toString(16).padStart(2, "0"); }).join("");
+    } catch(e) {
+      return null;
+    }
+  }
+
+  // Modal elements
+  const modal = document.getElementById("valideum-lead-modal");
+  const modalForm = document.getElementById("valideum-modal-form");
+  const modalClose = document.getElementById("valideum-modal-close");
+  const modalTitle = document.getElementById("valideum-modal-title");
+  const modalTierInput = document.getElementById("valideum-modal-tier");
+  const modalSourceInput = document.getElementById("valideum-modal-source");
+  const modalPreserved = document.getElementById("valideum-modal-preserved-fields");
+  const modalContent = document.getElementById("valideum-modal-content");
+  const modalConfirmation = document.getElementById("valideum-modal-confirmation");
+  const confClose = document.getElementById("valideum-confirmation-close");
+
+  let isModalSubmitted = false;
+  let preservedStep1Fields = {};
+
+  function syncPreservedFieldsToModal(fields) {
+    if (fields && typeof fields === "object") {
+      for (const [k, v] of Object.entries(fields)) {
+        if (v !== undefined && v !== null && String(v).trim() !== "") {
+          preservedStep1Fields[k] = String(v).trim();
+        }
+      }
+    }
+    if (modalPreserved) {
+      modalPreserved.innerHTML = "";
+      for (const [k, v] of Object.entries(preservedStep1Fields)) {
+        const inp = document.createElement("input");
+        inp.type = "hidden";
+        inp.name = "step1_" + k;
+        inp.value = String(v);
+        modalPreserved.appendChild(inp);
+      }
+    }
+  }
+
+  function findPricingSection() {
+    const byId = document.getElementById("pricing") || document.querySelector('[id*="pricing" i], [id*="plans" i], [id*="tiers" i]');
+    if (byId) return byId;
+    const tierBtn = document.querySelector("[data-tier]");
+    if (tierBtn && tierBtn.closest) {
+      return tierBtn.closest("section") || tierBtn.parentElement;
+    }
+    return null;
+  }
+
+  function scrollToPricingWithContext(fields) {
+    const pricingSection = findPricingSection();
+    if (!pricingSection) return false;
+
+    const valuesList = Object.values(preservedStep1Fields).filter(function(v) { return String(v).trim().length > 0; });
+    if (valuesList.length > 0) {
+      let banner = document.getElementById("valideum-pricing-context-banner");
+      if (!banner) {
+        banner = document.createElement("div");
+        banner.id = "valideum-pricing-context-banner";
+        banner.style.cssText = "max-width:48rem;margin:0 auto 1.5rem auto;padding:0.875rem 1.25rem;background:#14171d;border:1px solid rgba(217,119,6,0.45);border-left:4px solid #d97706;border-radius:6px;color:#e2e8f0;font-size:0.9rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem;box-shadow:0 10px 25px rgba(0,0,0,0.35);";
+        pricingSection.insertBefore(banner, pricingSection.firstChild);
+      }
+      const summaryText = valuesList.join(" • ");
+      banner.innerHTML = "";
+      const span = document.createElement("span");
+      span.textContent = "✓ Ready for: " + summaryText + " — Select a plan below to continue.";
+      banner.appendChild(span);
+    }
+
+    try {
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) {
+      pricingSection.scrollIntoView();
+    }
+    return true;
+  }
+
+  function extractNearbyInputFields(container) {
+    const fields = {};
+    if (!container || !container.querySelectorAll) return fields;
+    const inputs = container.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      const el = inputs[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.type === "button" || el.type === "hidden" || el.type === "email") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const cleanKey = String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40) || ("field_" + i);
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked && el.value) fields[cleanKey] = el.value.trim();
+      } else if (el.value && el.value.trim() !== "") {
+        fields[cleanKey] = el.value.trim();
+      }
+    }
+    return fields;
+  }
+
+  function showConfirmationModal() {
+    if (!modal) return;
+    isModalSubmitted = true;
+    if (modalContent) modalContent.classList.add("hidden");
+    if (modalConfirmation) modalConfirmation.classList.remove("hidden");
+    modal.classList.remove("hidden");
+  }
+
+  function openModal(options) {
+    if (!modal) return;
+    options = options || {};
+    const tier = options.tier || "";
+    const ctaName = options.ctaName || "general_cta";
+    const headerText = options.headerText || (tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME);
+
+    if (modalTierInput) modalTierInput.value = tier;
+    if (modalSourceInput) modalSourceInput.value = ctaName;
+    if (modalTitle) modalTitle.innerText = headerText;
+
+    syncPreservedFieldsToModal(options.preservedFields);
+
+    if (modalContent) modalContent.classList.remove("hidden");
+    if (modalConfirmation) modalConfirmation.classList.add("hidden");
+    isModalSubmitted = false;
+    modal.classList.remove("hidden");
+
+    const emailField = document.getElementById("valideum-modal-email");
+    if (emailField) {
+      setTimeout(function() { emailField.focus(); }, 50);
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+    sendEvent("cta_click", {
+      cta_name: ctaName,
+      sub_type: "modal_open",
+      tier: tier || null,
+      saw_privacy_first: sawPrivacy
+    });
+  }
+
+  function closeModal() {
+    if (!modal || modal.classList.contains("hidden")) return;
+    modal.classList.add("hidden");
+    if (!isModalSubmitted) {
+      sendEvent("cta_click", {
+        sub_type: "modal_abandon",
+        tier: modalTierInput ? modalTierInput.value : null,
+        saw_privacy_first: checkSawPrivacy()
+      });
+    }
+  }
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (confClose) confClose.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeModal();
+  });
+
+  // Handle modal submit
+  if (modalForm) {
+    modalForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById("valideum-modal-email");
+      const rawEmail = emailInput ? emailInput.value.trim() : "";
+      if (!rawEmail) return;
+
+      const email_hash = await hashEmail(rawEmail);
+      const tier = modalTierInput && modalTierInput.value ? modalTierInput.value : null;
+
+      // Extract non-PII form fields
+      const formData = new FormData(modalForm);
+      const fields = {};
+      formData.forEach(function(val, key) {
+        if (key !== "email") fields[key] = val;
+      });
+
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      sendEvent("form_submit", {
+        form_name: "valideum_lead_modal",
+        selected_tier: tier,
+        fields: fields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      showConfirmationModal();
+      setTimeout(function() { modalForm.reset(); }, 300);
+    });
+  }
+
+  // Wire every button & CTA click on the page
+  document.addEventListener("click", function(e) {
+    const target = e.target && e.target.closest ? e.target.closest("button, a, [data-track='click'], [data-open-modal]") : null;
+    if (!target) return;
+
+    const href = target.getAttribute("href") || "";
+    // Track Privacy Notice views (even inside the modal!) before returning
+    if (href.indexOf("privacy.html") !== -1 || href.indexOf("campaign-privacy.html") !== -1 || target.getAttribute("data-privacy-link") === "true") {
+      const firstTimePrivacy = !checkSawPrivacy();
+      hasSeenPrivacy = true;
+      privacySeenAt = privacySeenAt || Date.now();
+      try {
+        localStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+        sessionStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+      } catch (err) {}
+      if (firstTimePrivacy) {
+        sendEvent("cta_click", {
+          cta_name: "privacy_notice_link",
+          sub_type: "privacy_view",
+          had_prior_interest: hasShownInterest
+        });
+      }
+      return;
+    }
+
+    // Ignore modal internal buttons
+    if (target.closest("#valideum-lead-modal")) return;
+
+    const isModalTrigger = target.getAttribute("data-open-modal") === "true" || target.getAttribute("data-open-modal") === "" || href === "#valideum-lead-modal";
+    const isScrollToPricing = target.getAttribute("data-scroll-to") === "pricing" || href === "#pricing";
+    const tier = target.getAttribute("data-tier") || null;
+
+    // Form submit button inside an existing form (Note: button.type defaults to "submit" in DOM even outside forms!)
+    const inForm = Boolean(target.closest("form"));
+    const isSubmit = inForm && !isModalTrigger && !tier && (target.type === "submit" || target.tagName === "BUTTON");
+    if (isSubmit) {
+      return;
+    }
+
+    const ctaName = (target.getAttribute("data-cta-name") || target.innerText || target.value || "cta").trim().substring(0, 100);
+
+    // If CTA explicitly leads to pricing (or is a non-tier CTA inside a section with idea-specific inputs), capture inputs, track, and scroll to #pricing
+    const parentSection = target.closest ? (target.closest("form") || target.closest("section") || target.parentElement) : null;
+    const nearbyFields = !tier ? extractNearbyInputFields(parentSection) : {};
+    const hasNearbyInputValues = Object.keys(nearbyFields).length > 0;
+
+    if (!tier && !isModalTrigger && (isScrollToPricing || hasNearbyInputValues)) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      if (hasNearbyInputValues) {
+        syncPreservedFieldsToModal(nearbyFields);
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          sub_type: "search_intent",
+          fields: nearbyFields,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      } else {
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      }
+      if (scrollToPricingWithContext(nearbyFields)) {
+        e.preventDefault();
+        return;
+      }
+    }
+
+    if (tier || isModalTrigger || target.tagName === "BUTTON") {
+      e.preventDefault();
+      openModal({
+        tier: tier,
+        ctaName: ctaName,
+        headerText: tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME,
+        preservedFields: hasNearbyInputValues ? nearbyFields : undefined
+      });
+      return;
+    }
+
+    if (href && href.startsWith("#")) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      sendEvent("cta_click", { cta_name: ctaName, anchor: href, saw_privacy_first: sawPrivacy });
+    }
+  }, true);
+
+  // Wire every form submit on the page
+  document.addEventListener("submit", async function(e) {
+    const form = e.target;
+    if (!form || form.id === "valideum-modal-form") return;
+
+    e.preventDefault();
+    const formName = form.getAttribute("data-form-name") || form.id || "page_form";
+    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"], button');
+    const submitCtaName = submitBtn ? (submitBtn.getAttribute("data-cta-name") || submitBtn.innerText || submitBtn.value || formName).trim().substring(0, 100) : formName;
+    const emailInput = form.querySelector('input[type="email"], input[name="email"], input[name*="email" i]');
+    const rawEmail = emailInput && emailInput.value ? emailInput.value.trim() : "";
+
+    // Collect non-PII form values (support name, id, and placeholder attributes)
+    const fields = {};
+    const elements = form.elements;
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.tagName === "BUTTON") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const fieldKey = (el.name || el.id) ? (el.name || el.id) : String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40);
+      if (!fieldKey) continue;
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked) fields[fieldKey] = el.value;
+      } else if (el !== emailInput && el.value && el.value.trim() !== "") {
+        fields[fieldKey] = el.value.trim();
+      }
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+
+    if (rawEmail) {
+      syncPreservedFieldsToModal(fields);
+      const mergedFields = Object.assign({}, preservedStep1Fields, fields);
+      const email_hash = await hashEmail(rawEmail);
+      sendEvent("form_submit", {
+        form_name: formName,
+        selected_tier: mergedFields.selected_tier || null,
+        fields: mergedFields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      // Show confirmation modal state
+      showConfirmationModal();
+      setTimeout(function() { form.reset(); }, 300);
+    } else {
+      // Idea-specific interactive form (e.g. Company Name / License ID lookup).
+      // 1. Track search_intent with all entered fields
+      // 2. Preserve fields into the signup modal
+      // 3. Lead user to the #pricing section (or fall back to opening modal if no pricing section exists)
+      syncPreservedFieldsToModal(fields);
+      sendEvent("cta_click", {
+        form_name: formName,
+        cta_name: submitCtaName,
+        sub_type: "search_intent",
+        fields: fields,
+        anchor: "#pricing",
+        saw_privacy_first: sawPrivacy
+      });
+
+      const scrolledToPricing = scrollToPricingWithContext(fields);
+      if (!scrolledToPricing) {
+        openModal({
+          ctaName: formName + "_step1_search",
+          headerText: "Where should we send your " + BRAND_NAME + " results?",
+          preservedFields: fields
+        });
+      }
+    }
+  }, true);
+})();
+</script>
+
+</body>
+</html>
